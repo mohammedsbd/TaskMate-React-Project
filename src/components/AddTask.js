@@ -5,11 +5,15 @@ function AddTask({taskList,setTasklist}) {
   const handelSubmit=(e)=>{
     e.preventDefault();
     const date=new Date()
-    console.log(e.target.value)
-    console.log(date)
-    // const newTask={
-    //   id:date.getTime(),
-    //   name:e,time:`${date.toLocaleTimeString()} ${date.toLocaleDateString()}`}
+    console.log(e.target.task.value)
+    console.log(date.getTime())
+    const newTask = {
+      id: date.getTime(),
+      name: e.target.task.value,
+      time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`,
+    };
+    setTasklist([...taskList,newTask])
+    e.target.task.value=""
 
   }
 

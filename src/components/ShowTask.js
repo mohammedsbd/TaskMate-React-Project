@@ -9,11 +9,11 @@ function ShowTask({taskList,setTasklist}) {
           <span className="title">Todo</span>
           <span className="count">{taskList.length}</span>
         </div>
-        <button className="clearAll">Clear All</button>
+        <button className="clearAll" onClick={()=>setTasklist([])}>Clear All</button>
       </div>
       <ul>
         {taskList.map((task) => (
-          <li>
+          <li key={task.id}>
             <p>
               <span className="name">{task.name} </span>
               <span className="time">{task.time}</span>
