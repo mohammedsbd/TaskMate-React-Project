@@ -10,6 +10,14 @@ function Header() {
         />
         <span>Taskmate</span>
       </div>
+      <div className="themeSelector">
+        <span className="light"></span>
+        <span className="medium"></span>
+        <span className="dark"></span>
+        <span className="gOne"></span>
+        <span className="gTwo"></span>
+        <span className="gThree activeTheme"></span>
+      </div>
     </header>
   );
 }
