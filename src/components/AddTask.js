@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AddTask({taskList,setTasklist}) {
+function AddTask({taskList,setTasklist, task,setTask}) {
 
   const handelSubmit=(e)=>{
     e.preventDefault();
