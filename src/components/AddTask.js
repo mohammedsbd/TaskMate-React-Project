@@ -42,8 +42,8 @@ setTask({})
   return (
  <section className="addTask">
     <form onSubmit={handelSubmit}>
-        <input  value={task.name}  type="text" name='task' autoComplete='off' placeholder='addTask' maxLength={25} onChange={e=>setTask({...task, name: e.target.value})}/>
-        <button type='submit'>Add Task</button>
+        <input  value={task.name || ""}  type="text" name='task' autoComplete='off' placeholder='addTask' maxLength={25} onChange={e=>setTask({...task, name: e.target.value})}/>
+        <button type='submit'>{task.id ? "Update" : "Add"}</button>
     </form>
  </section>
   )
