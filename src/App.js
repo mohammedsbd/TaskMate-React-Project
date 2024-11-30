@@ -5,8 +5,14 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [taskList,setTasklist]=useState([])
+  const [taskList,setTasklist]=useState(JSON.parse(localStorage.getItem('tasklist')) || []);
   const [task,setTask] = useState({})
+
+
+  // evrytime we update out task list we set into our local storage
+  useEffect(() => {
+    localStorage.setItem('tasklist', JSON.stringify(taskList));  // Save the taskList to local storage every time it changes.
+  } ,[taskList]);
   return (
     <div className="App">
       <Header />
