@@ -30,7 +30,7 @@ setTask({})
     time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`,
   };
   setTasklist([...taskList, newTask]);
-  e.target.task.value = "";
+  setTask([])
     }
 
 
