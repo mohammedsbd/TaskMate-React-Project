@@ -44,3 +44,8 @@
   background-blend-mode: overlay, overlay, normal;
 }
 /* themes */
+* {
+    color: theme-specific-color;
+    background-color: theme-specific-background-color;
+    /* Other theme-specific styles */
+}

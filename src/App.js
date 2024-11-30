@@ -3,6 +3,7 @@ import AddTask from './components/AddTask';
 import ShowTask from './components/ShowTask';
 import './App.css';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
   const [taskList,setTasklist]=useState(JSON.parse(localStorage.getItem('tasklist')) || []);
