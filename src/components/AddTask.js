@@ -18,6 +18,7 @@ const updatedTaskList = taskList.map((todo) =>
     
 );
 setTasklist(updatedTaskList);
+setTask({})
 
     }else{
   const date = new Date();
